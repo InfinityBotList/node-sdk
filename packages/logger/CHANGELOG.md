@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2](https://github.com/InfinityBotList/node-sdk/compare/@infinitylist/logger@0.0.1...@infinitylist/logger@0.0.2) (2023-08-20)
+
+### Bug Fixes
+
+-   **update:** homepage link in packages ([794c7a0](https://github.com/InfinityBotList/node-sdk/commit/794c7a03f7479addfbe101f0a4f3294dda5ae0c6))
+-   **update:** stuff and things ([69535db](https://github.com/InfinityBotList/node-sdk/commit/69535db5df42533f2620a343a2959baa2d12119e))
+
 ## 0.0.1 (2023-08-20)
 
 ### Bug Fixes

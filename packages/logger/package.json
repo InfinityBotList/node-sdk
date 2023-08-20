@@ -4,7 +4,7 @@
     "license": "LGPL-3.0-only",
     "main": "./dist/logger.js",
     "types": "./dist/logger.d.ts",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "directories": {
         "src": "src",
         "test": "__tests__"
