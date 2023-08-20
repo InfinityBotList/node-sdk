@@ -6,7 +6,9 @@
     "packages/*"
   ],
   "dependencies": {
-    "@infinitylist/logger": "^0.0.1",
+    "@infinitylist/client": "latest",
+    "@infinitylist/emitter": "latest",
+    "@infinitylist/logger": "latest",
     "@types/express": "^4.17.11",
     "chalk": "^4.1.2",
     "events": "^3.3.0",
@@ -20,6 +22,10 @@
     "@types/node": "^20.5.1",
     "@typescript-eslint/parser": "^6.4.0",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "detritus-client": "^0.16.3",
+    "discord-rose": "^1.5.3",
+    "discord.js": "^14.13.0",
+    "eris": "^0.17.2",
     "eslint": "^8.47.0",
     "husky": "^8.0.3",
     "lerna": "^7.1.5",

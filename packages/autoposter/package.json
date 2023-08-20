@@ -1,0 +1,40 @@
+{
+    "name": "@infinitylist/autoposter",
+    "description": "Simple wrapper that will automatically post your bot stats to the infinity bots api",
+    "license": "LGPL-3.0-only",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "version": "0.0.0",
+    "directories": {
+        "src": "src",
+        "test": "__tests__"
+    },
+    "peerDependencies": {
+        "detritus-client": "^0.16.3",
+        "discord-rose": "^1.5.3",
+        "discord.js": "^14.13.0",
+        "eris": "^0.17.2"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "node ./__tests__/ap.test.js"
+    },
+    "author": {
+        "name": "Toxic Dev",
+        "url": "https://github.com/TheRealToxicDev"
+    },
+    "homepage": "https://infinitybotlist.github.io/node-sdk/index.html",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/InfinityBotList/node-sdk.git"
+    },
+    "bugs": {
+        "url": "https://github.com/InfinityBotList/node-sdk/issues"
+    }
+}

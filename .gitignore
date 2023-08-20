@@ -1,7 +1,13 @@
-dist
+# basic stuff
 node_modules
-source/interfaces
+./package-lock.json
+dist
+
+# lerna stuff
 lerna-debug.log
 npm-debug.log
 packages/*/lib
+packages/*/dist
+
+# hmm
 .idea
