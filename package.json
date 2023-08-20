@@ -37,7 +37,7 @@
     "test": "lerna run test",
     "validate": "prettier -c ./packages/**/src/**/*.{ts,tsx,js,jsx}"
   },
-  "homepage": "https://infinitybotlist.github.io/infinitybots/index.html",
+  "homepage": "https://infinitybotlist.github.io/node-sdk/index.html",
   "author": {
     "name": "Infinity Development",
     "url": "https://github.com/Infinity-Development",
