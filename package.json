@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "@infinitylist/logger": "^0.0.1",
     "@types/express": "^4.17.11",
     "chalk": "^4.1.2",
     "events": "^3.3.0",

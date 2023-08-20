@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { log } from '../plugins/Logger'
+const { prettyLogs } = require('@infinitylist/logger')
 
 export default class InfinityFetcher {
     private apiKey: string
@@ -26,15 +26,9 @@ export default class InfinityFetcher {
      */
     public async getUserVotes(userID?: string) {
         if (!userID || typeof userID !== 'string') {
-            return log('Please provide a valid discord user id!', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
+            return prettyLogs('Please provide a valid discord user id!', 'error')
         } else if (!this.botID) {
-            return log('Please provide a valid discord bot id', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
+            return prettyLogs('Please provide a valid discord bot id', 'error')
         }
 
         const res = await fetch(`https://spider.infinitybots.gg/users/${userID}/bots/${this.botID}/votes`, {
@@ -45,17 +39,14 @@ export default class InfinityFetcher {
         })
 
         if (!res.ok) {
-            return log('Whoops, we seem to be having some issues contacting our api. Please try again later!', {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
+            return prettyLogs(
+                'Whoops we seem to be having some issues contacting our api. Please try again later!',
+                'error'
+            )
         }
 
         if (res.status !== 204 && res.status !== 200) {
-            return log(`Hold up, it looks like our api responded with a status code of: ${res.status}`, {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
+            return prettyLogs(`Hold up, it looks like our api responded with a status code of ${res.status}`)
         }
 
         const voteData = await res.json()
@@ -84,17 +75,14 @@ export default class InfinityFetcher {
         })
 
         if (!res.ok) {
-            return log('Whoops, we seem to be having some issues contacting our api. Please try again later!', {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
+            return prettyLogs(
+                'Whoops we seem to be having some issues contacting our api. Please try again later!',
+                'error'
+            )
         }
 
         if (res.status !== 204 && res.status !== 200) {
-            return log(`Hold up, it looks like our api responded with a status code of: ${res.status}`, {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
+            return prettyLogs(`Hold up, it looks like our api responded with a status code of ${res.status}`)
         }
 
         const botData = await res.json()
