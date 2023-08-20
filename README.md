@@ -1,4 +1,4 @@
-# @infinitylist
+# Node SDK
 The official node sdk for interacting with our api.
 
 ---
