@@ -1,0 +1,18 @@
+{
+    "out": "./docs/",
+    "entryPoints": [
+        "packages/sdk/src/index.ts",
+        "packages/client/src/index.ts",
+        "packages/emitter/src/index.ts",
+        "packages/logger/src/logger.ts"
+    ],
+    "readme": "./pages/home.md",
+    "name": "@infinitylist",
+    "darkHighlightTheme": "dark-plus",
+    "lightHighlightTheme": "light-plus",
+    "githubPages": true,
+    "excludeExternals": false,
+    "excludePrivate": true,
+    "excludeInternal": false,
+    "theme": "default"
+}

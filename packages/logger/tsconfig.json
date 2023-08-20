@@ -1,0 +1,10 @@
+{
+    "files": ["./src/logger.ts"],
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "outDir": "./dist"
+    },
+    "include": [
+      "./src"
+    ]
+  }

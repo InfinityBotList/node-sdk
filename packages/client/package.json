@@ -1,0 +1,40 @@
+{
+    "name": "@infinitylist/client",
+    "description": "Simple module for interacting with the infinity bot list api",
+    "license": "LGPL-3.0-only",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "version": "0.0.0",
+    "dependencies": {
+        "@types/express": "^4.17.11",
+        "express": "^4.17.1",
+        "node-fetch": "^2.6.1",
+        "raw-body": "^2.4.1"
+    },
+    "directories": {
+        "src": "src",
+        "test": "__tests__"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "node ./__tests__/client.test.js"
+    },
+    "author": {
+        "name": "Toxic Dev",
+        "url": "https://github.com/TheRealToxicDev"
+    },
+    "homepage": "https://infinitybotlist.github.io/infinitybots/index.html",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/InfinityBotList/node-sdk.git"
+    },
+    "bugs": {
+        "url": "https://github.com/InfinityBotList/node-sdk/issues"
+    }
+}

@@ -1,0 +1,10 @@
+node_modules/
+docs/
+logs/
+*.log
+
+!dist/
+.eslintrc
+.gitattributes
+.gitignore
+.github/

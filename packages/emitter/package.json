@@ -1,0 +1,33 @@
+{
+    "name": "@infinitylist/emitter",
+    "description": "Event emitter that creates types based off of an interface",
+    "license": "LGPL-3.0-only",
+    "main": "dist/",
+    "version": "0.0.0",
+    "directories": {
+        "src": "src",
+        "test": "__tests__"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "node ./__tests__/emitter.test.js"
+    },
+    "author": {
+        "name": "Toxic Dev",
+        "url": "https://github.com/TheRealToxicDev"
+    },
+    "homepage": "https://infinitybotlist.github.io/infinitybots/index.html",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/InfinityBotList/node-sdk.git"
+    },
+    "bugs": {
+        "url": "https://github.com/InfinityBotList/node-sdk/issues"
+    }
+}
