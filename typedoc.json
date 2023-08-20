@@ -4,7 +4,8 @@
         "packages/sdk/src/index.ts",
         "packages/client/src/index.ts",
         "packages/emitter/src/index.ts",
-        "packages/logger/src/logger.ts"
+        "packages/logger/src/logger.ts",
+        "packages/autoposter/src/index.ts"
     ],
     "readme": "./pages/home.md",
     "name": "@infinitylist",
