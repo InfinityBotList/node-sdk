@@ -10,5 +10,3 @@ The official node sdk for interacting with our api.
 - [infinitylist/logger](./packages/logger/README.md)
 
 ---
-
-## Contributing
