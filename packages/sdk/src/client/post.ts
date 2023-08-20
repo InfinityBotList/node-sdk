@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
-import { log } from '../plugins/Logger'
 import { Bot } from '../typings'
+const { prettyLogs } = require('@infinitylist/logger')
 
 export default class InfinityPoster {
     private apiKey: string
@@ -23,25 +23,14 @@ export default class InfinityPoster {
      * POST JUST YOUR BOTS SERVER COUNT
      * @param apiKey Your bots infinity api token found in your bot settings
      * @param botID Your bots discord id. Can be found on the discord dev portal
-     * @requires servers The server count of your bot/client.
+     * @requires servers
      */
     public async postServerCount({ servers }: Bot) {
-        if (!this.apiKey) {
-            return log('Please provide a valid bot api token', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        } else if (!this.botID) {
-            return log('Please provide a valid bot id', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        } else if (!servers || typeof servers !== 'number') {
-            return log('Please provide a valid server count, should be a integer of 1 or greater!', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        }
+        if (!this.apiKey) return prettyLogs('Please provide a valid api token', 'error')
+        else if (!this.botID)
+            return prettyLogs('Please provide a valid discord bot id that has been approved on our list', 'error')
+        else if (!servers || typeof servers !== 'number')
+            return prettyLogs('Please provide a valid server count, should be a integer of 1 or greater!', 'error')
 
         const res = await fetch('https://spider.infinitybots.gg/bots/stats', {
             method: 'POST',
@@ -54,49 +43,28 @@ export default class InfinityPoster {
             })
         })
 
-        if (!res.ok) {
-            return log('Whoops, we seem to be having some issues contacting our api. Please try again later!', {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
-        }
-
-        if (res.status !== 204 && res.status !== 200) {
-            return log(`Hold up, it looks like our api responded with a status code of: ${res.status}`, {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
-        } else {
-            return log('Hooray, your server count has been posted!', {
-                header: '@INFINITYBOTS/NODE-SDK: STATS_POST',
-                type: 'success'
-            })
-        }
+        if (!res.ok)
+            return prettyLogs(
+                'Whoops we seem to be having some issues contacting our api. Please try again later!',
+                'error'
+            )
+        else if (res.status !== 204 && res.status !== 200)
+            return prettyLogs(`Hold up, it looks like our api responded with a status code of ${res.status}`)
+        else return prettyLogs('Hooray, your server count has been posted')
     }
 
     /**
      * POST JUST YOUR BOTS SHARD COUNT
      * @param apiKey Your bots infinity api token found in your bot settings
      * @param botID Your bots discord id. Can be found on the discord dev portal
-     * @requires shards The shard count of your bot/client.
+     * @requires shards
      */
     public async postShardCount({ shards }: Bot) {
-        if (!this.apiKey) {
-            return log('Please provide a valid bot api token', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        } else if (!this.botID) {
-            return log('Please provide a valid bot id', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        } else if (!shards || typeof shards !== 'number') {
-            return log('Please provide a valid shard count, should be a integer of 1 or greater!', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        }
+        if (!this.apiKey) return prettyLogs('Please provide a valid api token', 'error')
+        else if (!this.botID)
+            return prettyLogs('Please provide a valid discord bot id that has been approved on our list', 'error')
+        else if (!shards || typeof shards !== 'number')
+            return prettyLogs('Please provide a valid shard count, should be a integer of 1 or greater!', 'error')
 
         const res = await fetch('https://spider.infinitybots.gg/bots/stats', {
             method: 'POST',
@@ -109,49 +77,28 @@ export default class InfinityPoster {
             })
         })
 
-        if (!res.ok) {
-            return log('Whoops, we seem to be having some issues contacting our api. Please try again later!', {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
-        }
-
-        if (res.status !== 204 && res.status !== 200) {
-            return log(`Hold up, it looks like our api responded with a status code of: ${res.status}`, {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
-        } else {
-            return log('Hooray, your shard count has been posted!', {
-                header: '@INFINITYBOTS/NODE-SDK: STATS_POST',
-                type: 'success'
-            })
-        }
+        if (!res.ok)
+            return prettyLogs(
+                'Whoops we seem to be having some issues contacting our api. Please try again later!',
+                'error'
+            )
+        else if (res.status !== 204 && res.status !== 200)
+            return prettyLogs(`Hold up, it looks like our api responded with a status code of ${res.status}`)
+        else return prettyLogs('Hooray, your shard count has been posted')
     }
 
     /**
      * POST JUST YOUR BOTS USER COUNT
      * @param apiKey Your bots infinity api token found in your bot settings
      * @param botID Your bots discord id. Can be found on the discord dev portal
-     * @requires users The user count of your bot/client.
+     * @requires users
      */
     public async postUserCount({ users }: Bot) {
-        if (!this.apiKey) {
-            return log('Please provide a valid bot api token', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        } else if (!this.botID) {
-            return log('Please provide a valid bot id', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        } else if (!users || typeof users !== 'number') {
-            return log('Please provide a valid user count, should be a integer of 1 or greater!', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        }
+        if (!this.apiKey) return prettyLogs('Please provide a valid api token', 'error')
+        else if (!this.botID)
+            return prettyLogs('Please provide a valid discord bot id that has been approved on our list', 'error')
+        else if (!users || typeof users !== 'number')
+            return prettyLogs('Please provide a valid user count, should be a integer of 1 or greater!', 'error')
 
         const res = await fetch('https://spider.infinitybots.gg/bots/stats', {
             method: 'POST',
@@ -164,24 +111,14 @@ export default class InfinityPoster {
             })
         })
 
-        if (!res.ok) {
-            return log('Whoops, we seem to be having some issues contacting our api. Please try again later!', {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
-        }
-
-        if (res.status !== 204 && res.status !== 200) {
-            return log(`Hold up, it looks like our api responded with a status code of: ${res.status}`, {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
-        } else {
-            return log('Hooray, your user count has been posted!', {
-                header: '@INFINITYBOTS/NODE-SDK: STATS_POST',
-                type: 'success'
-            })
-        }
+        if (!res.ok)
+            return prettyLogs(
+                'Whoops we seem to be having some issues contacting our api. Please try again later!',
+                'error'
+            )
+        else if (res.status !== 204 && res.status !== 200)
+            return prettyLogs(`Hold up, it looks like our api responded with a status code of ${res.status}`)
+        else return prettyLogs('Hooray, your user count has been posted')
     }
 
     /**
@@ -193,32 +130,15 @@ export default class InfinityPoster {
      * @requires users The user count of your bot/client.
      */
     public async postBotStats({ servers, shards, users }: Bot) {
-        if (!this.apiKey) {
-            return log('Please provide a valid bot api token', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        } else if (!this.botID) {
-            return log('Please provide a valid bot id', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        } else if (!servers || typeof servers !== 'number') {
-            return log('Please provide a valid server count, should be a integer of 1 or greater!', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        } else if (!shards || typeof shards !== 'number') {
-            return log('Please provide a valid shard count, should be a integer of 1 or greater!', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        } else if (!users || typeof users !== 'number') {
-            return log('Please provide a valid user count, should be a integer of 1 or greater!', {
-                header: '@INFINITYBOTS/NODE-SDK: REFERENCE_ERROR',
-                type: 'error'
-            })
-        }
+        if (!this.apiKey) return prettyLogs('Please provide a valid api token', 'error')
+        else if (!this.botID)
+            return prettyLogs('Please provide a valid discord bot id that has been approved on our list', 'error')
+        else if (!servers || typeof servers !== 'number')
+            return prettyLogs('Please provide a valid server count, should be a integer of 1 or greater!', 'error')
+        else if (!shards || typeof shards !== 'number')
+            return prettyLogs('Please provide a valid shard count, should be a integer of 1 or greater!', 'error')
+        else if (!users || typeof users !== 'number')
+            return prettyLogs('Please provide a valid user count, should be a integer of 1 or greater!', 'error')
 
         const res = await fetch('https://spider.infinitybots.gg/bots/stats', {
             method: 'POST',
@@ -233,23 +153,13 @@ export default class InfinityPoster {
             })
         })
 
-        if (!res.ok) {
-            return log('Whoops, we seem to be having some issues contacting our api. Please try again later!', {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
-        }
-
-        if (res.status !== 204 && res.status !== 200) {
-            return log(`Hold up, it looks like our api responded with a status code of: ${res.status}`, {
-                header: '@INFINITYBOTS/NODE-SDK: SPIDER_REQUEST_FAILURE',
-                type: 'error'
-            })
-        } else {
-            return log('Hooray, your stats have been posted!', {
-                header: '@INFINITYBOTS/NODE-SDK: STATS_POST',
-                type: 'success'
-            })
-        }
+        if (!res.ok)
+            return prettyLogs(
+                'Whoops we seem to be having some issues contacting our api. Please try again later!',
+                'error'
+            )
+        else if (res.status !== 204 && res.status !== 200)
+            return prettyLogs(`Hold up, it looks like our api responded with a status code of ${res.status}`)
+        else return prettyLogs('Hooray, your stats have been posted!')
     }
 }
