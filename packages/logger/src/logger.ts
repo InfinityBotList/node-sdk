@@ -23,7 +23,7 @@ module.exports = class InfinityLogger {
             }
 
             case 'info': {
-                return console.log(`${chalk.blue(`[${date}] [COMMAND]:`)} ${content}`)
+                return console.log(`${chalk.blue(`[${date}] [INFO]:`)} ${content}`)
             }
 
             default:
