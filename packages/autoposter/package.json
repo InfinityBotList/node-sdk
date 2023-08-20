@@ -1,13 +1,12 @@
 {
     "name": "@infinitylist/autoposter",
-    "description": "Simple wrapper that will automatically post your bot stats to the infinity bots api",
+    "description": "API wrapper that will automatically post your bot stats to the infinity bots api",
     "license": "LGPL-3.0-only",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "version": "0.0.0",
     "directories": {
-        "src": "src",
-        "test": "__tests__"
+        "build": "tsc"
     },
     "peerDependencies": {
         "detritus-client": "^0.16.3",
