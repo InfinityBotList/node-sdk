@@ -3,7 +3,7 @@
     "description": "Event emitter that creates types based off of an interface",
     "license": "LGPL-3.0-only",
     "main": "dist/",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "directories": {
         "src": "src",
         "test": "__tests__"
