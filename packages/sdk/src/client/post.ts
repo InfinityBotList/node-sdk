@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { Bot } from '@infinitylist/client/dist/typings'
+import { Bot } from '../typings'
 const { prettyLogs } = require('@infinitylist/logger')
 
 export default class InfinityPoster {

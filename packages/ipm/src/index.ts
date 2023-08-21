@@ -19,7 +19,7 @@ interface Options {
  */
 export async function ipm({ directory }: Options): Promise<void> {
     const startTime = new Date()
-    const { lockFilePath, lockfile } = getLockfile(directory)
+    const { lockfilePath, lockfile } = getLockfile(directory)
     const wrapDirPath = join(directory, 'ipm')
 
     let totalAdded = 0
@@ -91,7 +91,7 @@ export async function ipm({ directory }: Options): Promise<void> {
     lockfile.dependencies = undefined
 
     const nextLockfile = JSON.stringify(lockfile, null, 2)
-    await Promise.all([writeFile(lockFilePath, nextLockfile), deletions])
+    await Promise.all([writeFile(lockfilePath, nextLockfile), deletions])
 
     console.log(
         [
