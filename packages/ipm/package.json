@@ -10,7 +10,7 @@
         "test": "__tests__"
     },
     "bin": {
-        "@infinitylist/installer": "dist/bin.js"
+        "@infinitylist/ipm": "dist/bin.js"
     },
     "files": [
         "dist/**/*"
@@ -19,8 +19,7 @@
         "access": "public"
     },
     "scripts": {
-        "build": "tsc",
-        "test": "node ./__tests__/integration.sh"
+        "build": "tsc"
     },
     "author": {
         "name": "Toxic Dev",
