@@ -1,5 +1,5 @@
 # Node SDK
-The official node sdk for interacting with our api.
+The official node sdk for interacting with all of our services and modules.
 
 ---
 

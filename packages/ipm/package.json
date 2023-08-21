@@ -1,0 +1,37 @@
+{
+    "name": "@infinitylist/installer",
+    "description": "Package installer that allows for offline installs through npm",
+    "license": "LGPL-3.0-only",
+    "main": "dist/index.js",
+    "types": "./dist/logger.d.ts",
+    "version": "0.0.0",
+    "directories": {
+        "src": "src",
+        "test": "__tests__"
+    },
+    "bin": {
+        "@infinitylist/installer": "dist/bin.js"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "node ./__tests__/integration.sh"
+    },
+    "author": {
+        "name": "Toxic Dev",
+        "url": "https://github.com/TheRealToxicDev"
+    },
+    "homepage": "https://infinitybotlist.github.io/node-sdk/index.html",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/InfinityBotList/node-sdk.git"
+    },
+    "bugs": {
+        "url": "https://github.com/InfinityBotList/node-sdk/issues"
+    }
+}

@@ -10,7 +10,7 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "forceConsistentCasingInFileNames": true,
-        "target": "ES6",
+        "target": "ES2022",
         "sourceMap": true,
         "lib": [
             "ES6"
