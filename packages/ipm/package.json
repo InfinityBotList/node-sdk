@@ -4,7 +4,7 @@
     "license": "MIT",
     "main": "dist/index.js",
     "types": "./dist/logger.d.ts",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "directories": {
         "src": "src",
         "test": "__tests__"
@@ -33,7 +33,6 @@
     "bugs": {
         "url": "https://github.com/InfinityBotList/node-sdk/issues"
     },
-    
     "dependencies": {
         "commander": "8.3.0",
         "gunzip-maybe": "1.4.2",

@@ -4,7 +4,7 @@
     "license": "MIT",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "version": "0.0.5",
+    "version": "0.1.0",
     "directories": {
         "src": "src",
         "test": "__tests__"
@@ -39,7 +39,7 @@
         "@types/node-fetch": "^2.5.10",
         "express": "^4.17.1",
         "node-fetch": "^2.6.1",
-        "typescript": "^5.1.6",
-        "raw-body": "^2.4.1"
+        "raw-body": "^2.4.1",
+        "typescript": "^5.1.6"
     }
 }

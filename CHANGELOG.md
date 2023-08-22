@@ -8,13 +8,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Bug Fixes
 
 -   **add:** autoposter and fix up some stuff ([109baba](https://github.com/InfinityBotList/node-sdk/commit/109baba49a25abf4a0756bbd30c9a866a390112a))
+-   **update:** licenses, packages and more ([a4e6a3b](https://github.com/InfinityBotList/node-sdk/commit/a4e6a3bf27f92e7c8819f13ac76a9d456cc354a2))
 
 ### Features
 
 -   **major:** update all packages ([5f938be](https://github.com/InfinityBotList/node-sdk/commit/5f938be742864bc69b6579ceb667f367d169c971))
-
-## 0.0.1 (2023-08-22)
-
-### Bug Fixes
-
--   **add:** autoposter and fix up some stuff ([109baba](https://github.com/InfinityBotList/node-sdk/commit/109baba49a25abf4a0756bbd30c9a866a390112a))
