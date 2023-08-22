@@ -24,13 +24,15 @@ export default class InfinityPoster {
      * @requires servers
      */
     public async postServerCount({ servers }: Bot) {
-        if (!this.apiKey) throw new ReferenceError('[@infinitylist/sdk]: please provide a valid infinity api bot token')
-        else if (!this.botID || typeof this.botID === 'string')
+        if (!this.apiKey) {
+            throw new ReferenceError('[@infinitylist/sdk]: please provide a valid infinity api bot token')
+        } else if (!this.botID || typeof this.botID === 'string') {
             throw new ReferenceError('[@infinitylist/sdk]: please provide a valid discord bot id')
-        else if (!servers || typeof servers !== 'number')
+        } else if (!servers || typeof servers !== 'number') {
             throw new ReferenceError(
                 '[@infinitylist/sdk]: please provide a valid server count, should be a valid integer of 1 or greater!'
             )
+        }
 
         const res = await fetch('https://spider.infinitybots.gg/bots/stats', {
             method: 'POST',
@@ -65,13 +67,15 @@ export default class InfinityPoster {
      * @requires shards
      */
     public async postShardCount({ shards }: Bot) {
-        if (!this.apiKey) throw new ReferenceError('[@infinitylist/sdk]: please provide a valid infinity api bot token')
-        else if (!this.botID || typeof this.botID === 'string')
+        if (!this.apiKey) {
+            throw new ReferenceError('[@infinitylist/sdk]: please provide a valid infinity api bot token')
+        } else if (!this.botID || typeof this.botID === 'string') {
             throw new ReferenceError('[@infinitylist/sdk]: please provide a valid discord bot id')
-        else if (!shards || typeof shards !== 'number')
+        } else if (!shards || typeof shards !== 'number') {
             throw new ReferenceError(
                 '[@infinitylist/sdk]: please provide a valid shard count, should be a valid integer of 1 or greater!'
             )
+        }
 
         const res = await fetch('https://spider.infinitybots.gg/bots/stats', {
             method: 'POST',
@@ -106,13 +110,15 @@ export default class InfinityPoster {
      * @requires users
      */
     public async postUserCount({ users }: Bot) {
-        if (!this.apiKey) throw new ReferenceError('[@infinitylist/sdk]: please provide a valid infinity api bot token')
-        else if (!this.botID || typeof this.botID === 'string')
+        if (!this.apiKey) {
+            throw new ReferenceError('[@infinitylist/sdk]: please provide a valid infinity api bot token')
+        } else if (!this.botID || typeof this.botID === 'string') {
             throw new ReferenceError('[@infinitylist/sdk]: please provide a valid discord bot id')
-        else if (!users || typeof users !== 'number')
+        } else if (!users || typeof users !== 'number') {
             throw new ReferenceError(
                 '[@infinitylist/sdk]: please provide a valid user count, should be a valid integer of 1 or greater!'
             )
+        }
 
         const res = await fetch('https://spider.infinitybots.gg/bots/stats', {
             method: 'POST',
@@ -149,21 +155,23 @@ export default class InfinityPoster {
      * @requires users The user count of your bot/client.
      */
     public async postBotStats({ servers, shards, users }: Bot) {
-        if (!this.apiKey) throw new ReferenceError('[@infinitylist/sdk]: please provide a valid infinity api bot token')
-        else if (!this.botID || typeof this.botID === 'string')
+        if (!this.apiKey) {
+            throw new ReferenceError('[@infinitylist/sdk]: please provide a valid infinity api bot token')
+        } else if (!this.botID || typeof this.botID === 'string') {
             throw new ReferenceError('[@infinitylist/sdk]: please provide a valid discord bot id')
-        else if (!servers || typeof servers !== 'number')
+        } else if (!servers || typeof servers !== 'number') {
             throw new ReferenceError(
                 '[@infinitylist/sdk]: please provide a valid server count, should be a valid integer of 1 or greater!'
             )
-        else if (!shards || typeof shards !== 'number')
+        } else if (!shards || typeof shards !== 'number') {
             throw new ReferenceError(
                 '[@infinitylist/sdk]: please provide a valid shard count, should be a valid integer of 1 or greater!'
             )
-        else if (!users || typeof users !== 'number')
+        } else if (!users || typeof users !== 'number') {
             throw new ReferenceError(
                 '[@infinitylist/sdk]: please provide a valid user count, should be a valid integer of 1 or greater!'
             )
+        }
 
         const res = await fetch('https://spider.infinitybots.gg/bots/stats', {
             method: 'POST',

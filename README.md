@@ -28,6 +28,8 @@ there is just a few commands you need to remember and you will be on your way!
 - `npm run test` - Run tests on all packages to make sure things are working
 - `npm run validate` - Check for valid formatting
 - `npm run publish` - Publish package(s) to npm and update versions
+- `npm run patch` - Publish package(s) under pre-release versions
+    - [versioning info](https://i.stack.imgur.com/fnalf.png)
 
 ## Versioning
 Semantic versioning (often abbreviated as “semver”) is a convention used for software versioning in a standardized way. Using semantic versioning, each version number is comprised of three parts: major, minor, and patch, which are incremented when:

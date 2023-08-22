@@ -21,10 +21,11 @@ export default class InfinityFetcher {
      * =================================================
      */
     public async getUserVotes(userID?: string) {
-        if (!userID || typeof userID !== 'string')
+        if (!userID || typeof userID !== 'string') {
             throw new ReferenceError('[@infinitylist/sdk]: please provide a valid user id')
-        else if (!this.botID || typeof this.botID !== 'string')
+        } else if (!this.botID || typeof this.botID !== 'string') {
             throw new ReferenceError('[@infinitylist/sdk]: Please provide a valid discord bot id')
+        }
 
         const res = await fetch(`https://spider.infinitybots.gg/users/${userID}/bots/${this.botID}/votes`, {
             method: 'GET',
@@ -61,8 +62,9 @@ export default class InfinityFetcher {
      * =================================================
      */
     public async getBotInfo() {
-        if (!this.botID)
+        if (!this.botID) {
             throw new ReferenceError('[@infinitylist/sdk]: no client id provided, please provide a bot id!')
+        }
 
         const res = await fetch(`https://spider.infinitybots.gg/bots/${this.botID}`, {
             method: 'GET',
