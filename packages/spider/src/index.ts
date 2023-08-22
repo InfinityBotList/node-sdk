@@ -1,7 +1,7 @@
 /**
  * EXPORT PACKAGE BASE
  */
-export * from './base/InfinityList'
+export * from './base/Spider'
 export * from './errors/ratelimit'
 export * from './errors/error'
 

@@ -12,7 +12,7 @@ interface Options {
     onlyEmit?: boolean
 }
 
-export default class InfinityList extends EventEmitter {
+export default class SpiderClient extends EventEmitter {
     private _options: Options
 
     constructor(auth: string, options: Options = {}) {
