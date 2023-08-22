@@ -32,8 +32,9 @@ export class BaseClient extends EventEmitter<{ posted: BotStats; error: Error }>
             api: options.api
         }
 
-        if (this._options.interval < 299999)
+        if (this._options.interval < 299999) {
             throw new Error('hold up, your interval should be greater then 300000 (5 minutes)')
+        }
 
         this._api = this._options.api || new InfinityBots(auth)
     }
