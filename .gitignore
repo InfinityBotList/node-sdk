@@ -1,7 +1,10 @@
 # basic stuff
 node_modules
 ./package-lock.json
+package-lock.json
 dist
+ideas/*
+ideas
 
 # lerna stuff
 lerna-debug.log
