@@ -1,6 +1,6 @@
 {
-    "name": "infinitylist",
-    "description": "The easy way to interact with the infinity api",
+    "name": "@infinitylist/spider",
+    "description": "The easy way to interact with spider.infinitybots.gg",
     "license": "MIT",
     "main": "./dist/logger.js",
     "types": "./dist/logger.d.ts",
@@ -48,5 +48,6 @@
     },
     "devDependencies": {
         "typescript": "^5.1.6"
-    }
+    },
+    "gitHead": "7c8a6a41e92aada1bdebf2b9aafe92251ff5a567"
 }
