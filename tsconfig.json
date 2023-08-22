@@ -13,7 +13,10 @@
         "target": "ES6",
         "sourceMap": true,
         "lib": [
-            "ES6"
+            "ES6",
+            "ES2019",
+            "ES2017",
+            "ES2020"
         ]
     },
     "exclude": [

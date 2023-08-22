@@ -29,5 +29,9 @@
     },
     "bugs": {
         "url": "https://github.com/InfinityBotList/node-sdk/issues"
+    },
+    "dependencies": {
+        "events": "^3.3.0",
+        "typescript": "^5.1.6"
     }
 }
