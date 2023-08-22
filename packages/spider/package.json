@@ -4,7 +4,7 @@
     "license": "MIT",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "directories": {
         "src": "src",
         "test": "__tests__"
