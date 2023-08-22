@@ -199,7 +199,7 @@ export interface BotStats {
     servers: number
     shards: number
     users: number
-    shard_list: number[]
+    shard_list?: number[]
 }
 
 export interface Bot {

@@ -6,6 +6,7 @@
         "packages/emitter/src/index.ts",
         "packages/logger/src/logger.ts",
         "packages/ipm/src/index.ts",
+        "packages/ap/src/index.ts"
     ],
     "readme": "./pages/home.md",
     "name": "@infinitylist",
