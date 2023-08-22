@@ -1,6 +1,6 @@
 {
     "name": "@infinitylist/ap",
-    "description": "The easy way to post your bots user, server and shard count stats.",
+    "description": "The easy way to post your bots user, server and shard count stats to the infinity api.",
     "license": "MIT",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",

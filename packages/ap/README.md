@@ -9,9 +9,6 @@ The easy way to post your bots user, server and shard count stats.
 ## Supported Libraries
 ```diff
 + discord.js
-- detritus
-- discord-rose
-- eris
 ```
 
 ---

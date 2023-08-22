@@ -1,6 +1,6 @@
 {
     "name": "@infinitylist/sdk",
-    "description": "Simple module for interacting with the infinity bot list api",
+    "description": "Simple module for interacting with the infinity api",
     "license": "MIT",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

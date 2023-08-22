@@ -97,11 +97,11 @@ export class SpiderClient extends EventEmitter {
     /**
      * ALERT BASED EVENTS
      */
-    public async getUserAlerts(id: Snowflake, query?: PageQuery): Promise<UserAlerts> {
+    public async getUserAlerts(id: Snowflake, page?: PageQuery): Promise<UserAlerts> {
         if (!id) throw new Error('please provide a valid user id!')
-        if (query && typeof query.page !== 'number') throw new Error('page should be a valid number')
+        if (page && typeof page !== 'number') throw new Error('page should be a valid number')
 
-        return this._request('GET', `/users/${id}/alerts`, query).then((x: UserAlerts) => {
+        return this._request('GET', `/users/${id}/alerts`, page).then((x: UserAlerts) => {
             return {
                 count: x.count,
                 per_page: x.per_page,

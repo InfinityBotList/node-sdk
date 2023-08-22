@@ -1,6 +1,6 @@
 {
     "name": "@infinitylist/emitter",
-    "description": "Event emitter that creates types based off of an interface",
+    "description": "Custom event emitter that creates types based off of an interface",
     "license": "MIT",
     "main": "dist/",
     "version": "0.1.0",

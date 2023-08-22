@@ -1,6 +1,6 @@
 {
     "name": "@infinitylist/logger",
-    "description": "Simple module for cleaner looking console logs",
+    "description": "Simple module for somewhat cleaner looking console logs",
     "license": "MIT",
     "main": "./dist/logger.js",
     "types": "./dist/logger.d.ts",
