@@ -30,7 +30,7 @@
     "docs:gen": "typedoc",
     "format": "prettier -w ./packages/**/src/**/*.{ts,tsx,js,jsx}",
     "linter": "eslint --fix ./packages/**/src/**/*.{ts,tsx,js,jsx}",
-    "patch": "lerna publish prerelease",
+    "patch": "npm run linter && npm run format && npm run build && lerna publish prerelease",
     "prepare": "husky install",
     "publish": "npm run linter && npm run format && npm run build && lerna publish",
     "test": "lerna run test",
