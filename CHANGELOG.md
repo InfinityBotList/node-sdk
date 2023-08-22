@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7-alpha.0](https://github.com/InfinityBotList/node-sdk/compare/v0.1.6...v0.1.7-alpha.0) (2023-08-22)
+
+### Bug Fixes
+
+-   **update:** package logs and more ([c5688eb](https://github.com/InfinityBotList/node-sdk/commit/c5688eb2ef405539acc017bf2d7afcc33bb6afc1))
+
 ## [0.1.6](https://github.com/InfinityBotList/node-sdk/compare/v0.1.5...v0.1.6) (2023-08-22)
 
 ### Bug Fixes
