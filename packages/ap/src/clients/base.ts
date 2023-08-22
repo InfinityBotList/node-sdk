@@ -28,7 +28,7 @@ export class BaseClient extends EventEmitter<{ posted: BotStats; error: Error }>
         this._options = {
             interval: options.interval ?? 300000,
             postOnStart: options.postOnStart ?? true,
-            startPosting: options.startPosting ?? false,
+            startPosting: options.startPosting ?? true,
             api: options.api
         }
 
