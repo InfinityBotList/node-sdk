@@ -1,7 +1,7 @@
 {
     "name": "@infinitylist/ipm",
     "description": "Infinity package manager, allows for offline installs and more using shrinkwrap and pacote",
-    "license": "LGPL-3.0-only",
+    "license": "MIT",
     "main": "dist/index.js",
     "types": "./dist/logger.d.ts",
     "version": "0.0.1",
