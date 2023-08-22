@@ -2,11 +2,14 @@
     "$schema": "node_modules/lerna/schemas/lerna-schema.json",
     "command": {
         "publish": {
+            "continueIfNoMatch": true,
             "registry": "https://registry.npmjs.org/",
             "conventionalCommits": true,
             "npmClient": "npm"
         },
         "version": {
+            "forcePublish": true,
+            "conventionalGraduate": true,
             "allowBranch": "master",
             "message": "publish new version",
             "npmClient": "npm"
