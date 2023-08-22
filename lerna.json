@@ -8,7 +8,6 @@
             "verifyAccess": true
         },
         "version": {
-            "createRelease": "github",
             "allowBranch": "master",
             "message": "publish new version",
             "npmClient": "npm"
