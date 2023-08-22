@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/InfinityBotList/node-sdk/compare/@infinitylist/sdk@0.0.3...@infinitylist/sdk@0.0.4) (2023-08-22)
+
+### Bug Fixes
+
+-   **add:** autoposter and fix up some stuff ([109baba](https://github.com/InfinityBotList/node-sdk/commit/109baba49a25abf4a0756bbd30c9a866a390112a))
+
 ## [0.0.3](https://github.com/InfinityBotList/node-sdk/compare/@infinitylist/sdk@0.0.2...@infinitylist/sdk@0.0.3) (2023-08-22)
 
 **Note:** Version bump only for package @infinitylist/sdk
