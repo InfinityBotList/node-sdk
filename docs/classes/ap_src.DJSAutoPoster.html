@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>EventEmitter | @infinitylist</title><meta name="description" content="Documentation for @infinitylist"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>DJSAutoPoster | @infinitylist</title><meta name="description" content="Documentation for @infinitylist"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,22 +13,21 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../index.html">@infinitylist</a></li>
-<li><a href="../modules/emitter_src.html">emitter/src</a></li>
-<li><a href="emitter_src.EventEmitter.html">EventEmitter</a></li></ul>
-<h1>Class EventEmitter&lt;Map&gt;</h1></div> 
-<section class="tsd-panel">
-<h4>Type Parameters</h4>
-<ul class="tsd-type-parameter-list">
-<li>
-<h4><span class="tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type ">MapType</span></h4></li></ul></section> 
+<li><a href="../modules/ap_src.html">ap/src</a></li>
+<li><a href="ap_src.DJSAutoPoster.html">DJSAutoPoster</a></li></ul>
+<h1>Class DJSAutoPoster</h1></div>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
-<li><span class="tsd-signature-type ">EventEmitter</span>
+<li><span class="tsd-signature-type ">BaseClient</span>
 <ul class="tsd-hierarchy">
-<li><span class="target">EventEmitter</span></li></ul></li></ul></section><aside class="tsd-sources">
+<li><span class="target">DJSAutoPoster</span></li></ul></li></ul></section>
+<section class="tsd-panel">
+<h4>Implements</h4>
+<ul class="tsd-hierarchy">
+<li><span class="tsd-signature-type ">BaseClientInterface</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L13">packages/emitter/src/emitters/EventEmitter.ts:13</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/ap/src/clients/djs_client.ts#L6">packages/ap/src/clients/djs_client.ts:6</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -36,96 +35,117 @@
 <div class="tsd-accordion-details">
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Constructors</h3>
-<div class="tsd-index-list"><a href="emitter_src.EventEmitter.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-512"><rect fill="var(--color-icon-background)" stroke="#4D7FFF" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)"></path></g></svg><span>constructor</span></a>
+<div class="tsd-index-list"><a href="ap_src.DJSAutoPoster.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-512"><rect fill="var(--color-icon-background)" stroke="#4D7FFF" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)"></path></g></svg><span>constructor</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Properties</h3>
-<div class="tsd-index-list"><a href="emitter_src.EventEmitter.html#_eventMapper_" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-1024"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)"></path></g></svg><span>[event<wbr/>Mapper]</span></a>
-<a href="emitter_src.EventEmitter.html#addListener" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>add<wbr/>Listener</span></a>
-<a href="emitter_src.EventEmitter.html#emit" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>emit</span></a>
-<a href="emitter_src.EventEmitter.html#eventNames" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>event<wbr/>Names</span></a>
-<a href="emitter_src.EventEmitter.html#listeners" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>listeners</span></a>
-<a href="emitter_src.EventEmitter.html#off" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>off</span></a>
-<a href="emitter_src.EventEmitter.html#on" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>on</span></a>
-<a href="emitter_src.EventEmitter.html#once" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>once</span></a>
-<a href="emitter_src.EventEmitter.html#prependListener" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>prepend<wbr/>Listener</span></a>
-<a href="emitter_src.EventEmitter.html#prependOnceListener" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>prepend<wbr/>Once<wbr/>Listener</span></a>
-<a href="emitter_src.EventEmitter.html#rawListeners" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>raw<wbr/>Listeners</span></a>
-<a href="emitter_src.EventEmitter.html#removeAllListeners" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>All<wbr/>Listeners</span></a>
-<a href="emitter_src.EventEmitter.html#removeListener" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>Listener</span></a>
-<a href="emitter_src.EventEmitter.html#captureRejectionSymbol" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>capture<wbr/>Rejection<wbr/>Symbol</span></a>
-<a href="emitter_src.EventEmitter.html#captureRejections" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>capture<wbr/>Rejections</span></a>
-<a href="emitter_src.EventEmitter.html#defaultMaxListeners" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>default<wbr/>Max<wbr/>Listeners</span></a>
-<a href="emitter_src.EventEmitter.html#errorMonitor" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>error<wbr/>Monitor</span></a>
+<div class="tsd-index-list"><a href="ap_src.DJSAutoPoster.html#_eventMapper_" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-1024"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)"></path></g></svg><span>[event<wbr/>Mapper]</span></a>
+<a href="ap_src.DJSAutoPoster.html#_interval" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_interval</span></a>
+<a href="ap_src.DJSAutoPoster.html#_started" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_started</span></a>
+<a href="ap_src.DJSAutoPoster.html#addListener" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>add<wbr/>Listener</span></a>
+<a href="ap_src.DJSAutoPoster.html#emit" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>emit</span></a>
+<a href="ap_src.DJSAutoPoster.html#eventNames" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>event<wbr/>Names</span></a>
+<a href="ap_src.DJSAutoPoster.html#listeners" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>listeners</span></a>
+<a href="ap_src.DJSAutoPoster.html#off" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>off</span></a>
+<a href="ap_src.DJSAutoPoster.html#on" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>on</span></a>
+<a href="ap_src.DJSAutoPoster.html#once" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>once</span></a>
+<a href="ap_src.DJSAutoPoster.html#prependListener" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>prepend<wbr/>Listener</span></a>
+<a href="ap_src.DJSAutoPoster.html#prependOnceListener" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>prepend<wbr/>Once<wbr/>Listener</span></a>
+<a href="ap_src.DJSAutoPoster.html#rawListeners" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>raw<wbr/>Listeners</span></a>
+<a href="ap_src.DJSAutoPoster.html#removeAllListeners" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>All<wbr/>Listeners</span></a>
+<a href="ap_src.DJSAutoPoster.html#removeListener" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>Listener</span></a>
+<a href="ap_src.DJSAutoPoster.html#captureRejectionSymbol" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>capture<wbr/>Rejection<wbr/>Symbol</span></a>
+<a href="ap_src.DJSAutoPoster.html#captureRejections" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>capture<wbr/>Rejections</span></a>
+<a href="ap_src.DJSAutoPoster.html#defaultMaxListeners" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>default<wbr/>Max<wbr/>Listeners</span></a>
+<a href="ap_src.DJSAutoPoster.html#errorMonitor" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>error<wbr/>Monitor</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Methods</h3>
-<div class="tsd-index-list"><a href="emitter_src.EventEmitter.html#getMaxListeners" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-2048"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)"></path></g></svg><span>get<wbr/>Max<wbr/>Listeners</span></a>
-<a href="emitter_src.EventEmitter.html#listenerCount" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>listener<wbr/>Count</span></a>
-<a href="emitter_src.EventEmitter.html#setMaxListeners" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Max<wbr/>Listeners</span></a>
-<a href="emitter_src.EventEmitter.html#addAbortListener" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>add<wbr/>Abort<wbr/>Listener</span></a>
-<a href="emitter_src.EventEmitter.html#getEventListeners" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Event<wbr/>Listeners</span></a>
-<a href="emitter_src.EventEmitter.html#getMaxListeners-2" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Max<wbr/>Listeners</span></a>
-<a href="emitter_src.EventEmitter.html#listenerCount-2" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>listener<wbr/>Count</span></a>
-<a href="emitter_src.EventEmitter.html#on-1" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>on</span></a>
-<a href="emitter_src.EventEmitter.html#once-1" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>once</span></a>
-<a href="emitter_src.EventEmitter.html#setMaxListeners-2" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Max<wbr/>Listeners</span></a>
+<div class="tsd-index-list"><a href="ap_src.DJSAutoPoster.html#_binder" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-2048"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)"></path></g></svg><span>_binder</span></a>
+<a href="ap_src.DJSAutoPoster.html#_post" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_post</span></a>
+<a href="ap_src.DJSAutoPoster.html#_start" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_start</span></a>
+<a href="ap_src.DJSAutoPoster.html#_stop" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_stop</span></a>
+<a href="ap_src.DJSAutoPoster.html#clientReady" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>client<wbr/>Ready</span></a>
+<a href="ap_src.DJSAutoPoster.html#getMaxListeners" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Max<wbr/>Listeners</span></a>
+<a href="ap_src.DJSAutoPoster.html#getStats" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Stats</span></a>
+<a href="ap_src.DJSAutoPoster.html#listenerCount" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>listener<wbr/>Count</span></a>
+<a href="ap_src.DJSAutoPoster.html#setMaxListeners" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Max<wbr/>Listeners</span></a>
+<a href="ap_src.DJSAutoPoster.html#waitForReady" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>wait<wbr/>For<wbr/>Ready</span></a>
+<a href="ap_src.DJSAutoPoster.html#addAbortListener" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>add<wbr/>Abort<wbr/>Listener</span></a>
+<a href="ap_src.DJSAutoPoster.html#getEventListeners" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Event<wbr/>Listeners</span></a>
+<a href="ap_src.DJSAutoPoster.html#getMaxListeners-2" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Max<wbr/>Listeners</span></a>
+<a href="ap_src.DJSAutoPoster.html#listenerCount-2" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>listener<wbr/>Count</span></a>
+<a href="ap_src.DJSAutoPoster.html#on-1" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>on</span></a>
+<a href="ap_src.DJSAutoPoster.html#once-1" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>once</span></a>
+<a href="ap_src.DJSAutoPoster.html#setMaxListeners-2" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Max<wbr/>Listeners</span></a>
 </div></section></div></details></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Constructors</h2>
 <section class="tsd-panel tsd-member"><a id="constructor" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" id="icon-anchor"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5"></path></g></svg></a></h3>
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="constructor.new_EventEmitter"><span class="tsd-kind-constructor-signature">new <wbr/>Event<wbr/>Emitter</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">opts</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span><a href="#constructor.new_EventEmitter" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_DJSAutoPoster"><span class="tsd-kind-constructor-signature">new DJSAuto<wbr/>Poster</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">auth</span>, <span class="tsd-kind-parameter">client</span>, <span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a><a href="#constructor.new_DJSAutoPoster" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<section class="tsd-panel">
-<h4>Type Parameters</h4>
-<ul class="tsd-type-parameter-list">
-<li>
-<h4><span class="tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type ">MapType</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">opts</span>: <span class="tsd-signature-type ">EventEmitterOptions</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
-<p>Overrides EM.constructor</p>
+<h5><span class="tsd-kind-parameter">auth</span>: <span class="tsd-signature-type">string</span></h5></li>
+<li>
+<h5><span class="tsd-kind-parameter">client</span>: <span class="tsd-signature-type">any</span></h5></li>
+<li>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-type ">AutoPoster</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></h4><aside class="tsd-sources">
+<p>Overrides BaseClient.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L16">packages/emitter/src/emitters/EventEmitter.ts:16</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/ap/src/clients/djs_client.ts#L9">packages/ap/src/clients/djs_client.ts:9</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
-<section class="tsd-panel tsd-member"><a id="_eventMapper_" class="tsd-anchor"></a>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="_eventMapper_" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>[event<wbr/>Mapper]</span><a href="#_eventMapper_" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">[event<wbr/>Mapper]</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">EventMapperOptions</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<p>Inherited from BaseClient.[eventMapper]</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L14">packages/emitter/src/emitters/EventEmitter.ts:14</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="addListener" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:10</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="_interval" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>_interval</span><a href="#_interval" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">_interval</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Timeout</span></div><aside class="tsd-sources">
+<p>Inherited from BaseClient._interval</p>
+<ul>
+<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/ap/src/clients/base.ts#L18">packages/ap/src/clients/base.ts:18</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="_started" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>_started</span><a href="#_started" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">_started</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<p>Inherited from BaseClient._started</p>
+<ul>
+<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/ap/src/clients/base.ts#L17">packages/ap/src/clients/base.ts:17</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="addListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>add<wbr/>Listener</span><a href="#addListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">add<wbr/>Listener</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">add<wbr/>Listener</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="addListener.__type.__type-1"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-signature" id="addListener.__type.__type-1"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></li>
 <li class="tsd-description">
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span></h5></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.addListener</p>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<p>Inherited from BaseClient.addListener</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L27">packages/emitter/src/emitters/EventEmitter.ts:27</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="emit" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:14</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="emit" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>emit</span><a href="#emit" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">emit</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">data</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
@@ -139,19 +159,19 @@
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span></h5></li>
 <li>
-<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">data</span>: <span class="tsd-signature-type ">TypeToData</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">data</span>: <span class="tsd-signature-type ">TypeToData</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.emit</p>
+<p>Inherited from BaseClient.emit</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L31">packages/emitter/src/emitters/EventEmitter.ts:31</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="eventNames" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:16</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="eventNames" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>event<wbr/>Names</span><a href="#eventNames" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">event<wbr/>Names</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
@@ -165,239 +185,239 @@
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.eventNames</p>
+<p>Inherited from BaseClient.eventNames</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L24">packages/emitter/src/emitters/EventEmitter.ts:24</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="listeners" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:12</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="listeners" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>listeners</span><a href="#listeners" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">listeners</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">listeners</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="listeners.__type-6.__type-7"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
+<li class="tsd-signature" id="listeners.__type-6.__type-7"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
 <li class="tsd-description">
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.listeners</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<p>Inherited from BaseClient.listeners</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L41">packages/emitter/src/emitters/EventEmitter.ts:41</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="off" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:22</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="off" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>off</span><a href="#off" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">off</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">off</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="off.__type-8.__type-9"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-signature" id="off.__type-8.__type-9"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></li>
 <li class="tsd-description">
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span></h5></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.off</p>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<p>Inherited from BaseClient.off</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L33">packages/emitter/src/emitters/EventEmitter.ts:33</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="on" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:17</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="on" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on</span><a href="#on" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">on</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">on</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="on.__type-10.__type-11"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-signature" id="on.__type-10.__type-11"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></li>
 <li class="tsd-description">
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span></h5></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.on</p>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<p>Inherited from BaseClient.on</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L26">packages/emitter/src/emitters/EventEmitter.ts:26</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="once" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:13</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="once" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>once</span><a href="#once" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">once</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">once</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="once.__type-12.__type-13"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-signature" id="once.__type-12.__type-13"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></li>
 <li class="tsd-description">
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span></h5></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.once</p>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<p>Inherited from BaseClient.once</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L29">packages/emitter/src/emitters/EventEmitter.ts:29</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="prependListener" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:15</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="prependListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>prepend<wbr/>Listener</span><a href="#prependListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">prepend<wbr/>Listener</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">prepend<wbr/>Listener</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="prependListener.__type-14.__type-15"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-signature" id="prependListener.__type-14.__type-15"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></li>
 <li class="tsd-description">
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span></h5></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.prependListener</p>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<p>Inherited from BaseClient.prependListener</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L38">packages/emitter/src/emitters/EventEmitter.ts:38</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="prependOnceListener" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:20</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="prependOnceListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>prepend<wbr/>Once<wbr/>Listener</span><a href="#prependOnceListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">prepend<wbr/>Once<wbr/>Listener</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">prepend<wbr/>Once<wbr/>Listener</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="prependOnceListener.__type-16.__type-17"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-signature" id="prependOnceListener.__type-16.__type-17"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></li>
 <li class="tsd-description">
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span></h5></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.prependOnceListener</p>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<p>Inherited from BaseClient.prependOnceListener</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L39">packages/emitter/src/emitters/EventEmitter.ts:39</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="rawListeners" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:21</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="rawListeners" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>raw<wbr/>Listeners</span><a href="#rawListeners" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">raw<wbr/>Listeners</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">raw<wbr/>Listeners</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="rawListeners.__type-18.__type-19"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
+<li class="tsd-signature" id="rawListeners.__type-18.__type-19"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
 <li class="tsd-description">
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.rawListeners</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<p>Inherited from BaseClient.rawListeners</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L42">packages/emitter/src/emitters/EventEmitter.ts:42</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="removeAllListeners" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:23</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="removeAllListeners" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remove<wbr/>All<wbr/>Listeners</span><a href="#removeAllListeners" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">remove<wbr/>All<wbr/>Listeners</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">remove<wbr/>All<wbr/>Listeners</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="removeAllListeners.__type-20.__type-21"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-signature" id="removeAllListeners.__type-20.__type-21"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></li>
 <li class="tsd-description">
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.removeAllListeners</p>
+<h4 class="tsd-returns-title">Returns <a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<p>Inherited from BaseClient.removeAllListeners</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L36">packages/emitter/src/emitters/EventEmitter.ts:36</a></li></ul></aside></section>
-<section class="tsd-panel tsd-member"><a id="removeListener" class="tsd-anchor"></a>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:19</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="removeListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remove<wbr/>Listener</span><a href="#removeListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">remove<wbr/>Listener</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">remove<wbr/>Listener</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="removeListener.__type-22.__type-23"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></li>
+<li class="tsd-signature" id="removeListener.__type-22.__type-23"><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">event</span>, <span class="tsd-kind-parameter">listener</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></li>
 <li class="tsd-description">
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
 <ul class="tsd-type-parameter-list">
 <li>
-<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h4></li></ul></section>
+<h4><span class="tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">&quot;error&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;posted&quot;</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type tsd-kind-type-parameter">K</span></h5></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
-<p>Overrides EM.removeListener</p>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">listener</span>: <span class="tsd-signature-type ">Listener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">error</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Error</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">posted</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type tsd-kind-type-parameter">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<p>Inherited from BaseClient.removeListener</p>
 <ul>
-<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/emitter/src/emitters/EventEmitter.ts#L34">packages/emitter/src/emitters/EventEmitter.ts:34</a></li></ul></aside></section>
+<li>Defined in packages/emitter/dist/emitters/EventEmitter.d.ts:18</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="captureRejectionSymbol" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <code class="tsd-tag ts-flagReadonly">Readonly</code> <span>capture<wbr/>Rejection<wbr/>Symbol</span><a href="#captureRejectionSymbol" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">capture<wbr/>Rejection<wbr/>Symbol</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="client_src.InfinityBots.html#captureRejectionSymbol" class="tsd-signature-type tsd-kind-property">captureRejectionSymbol</a></div>
@@ -407,7 +427,7 @@
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v13.4.0, v12.16.0</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.captureRejectionSymbol</p>
+<p>Inherited from BaseClient.captureRejectionSymbol</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:390</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="captureRejections" class="tsd-anchor"></a>
@@ -419,7 +439,7 @@
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v13.4.0, v12.16.0</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.captureRejections</p>
+<p>Inherited from BaseClient.captureRejections</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:397</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="defaultMaxListeners" class="tsd-anchor"></a>
@@ -450,7 +470,7 @@ Its <code>name</code> property is set to <code>&#39;MaxListenersExceededWarning&
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v0.11.2</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.defaultMaxListeners</p>
+<p>Inherited from BaseClient.defaultMaxListeners</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:434</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="errorMonitor" class="tsd-anchor"></a>
@@ -463,26 +483,85 @@ regular <code>&#39;error&#39;</code> listener is installed.</p>
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v13.6.0, v12.17.0</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.errorMonitor</p>
+<p>Inherited from BaseClient.errorMonitor</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:383</li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="_binder" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>_binder</span><a href="#_binder" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-inherited">
+<li class="tsd-signature tsd-anchor-link" id="_binder._binder-1"><span class="tsd-kind-call-signature">_binder</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">binds</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#_binder._binder-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">binds</span>: <span class="tsd-signature-type ">BaseClientInterface</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<p>Inherited from BaseClient._binder</p>
+<ul>
+<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/ap/src/clients/base.ts#L41">packages/ap/src/clients/base.ts:41</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="_post" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>_post</span><a href="#_post" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-inherited">
+<li class="tsd-signature tsd-anchor-link" id="_post._post-1"><span class="tsd-kind-call-signature">_post</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#_post._post-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<p>Inherited from BaseClient._post</p>
+<ul>
+<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/ap/src/clients/base.ts#L80">packages/ap/src/clients/base.ts:80</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="_start" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>_start</span><a href="#_start" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-inherited">
+<li class="tsd-signature tsd-anchor-link" id="_start._start-1"><span class="tsd-kind-call-signature">_start</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#_start._start-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<p>Inherited from BaseClient._start</p>
+<ul>
+<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/ap/src/clients/base.ts#L55">packages/ap/src/clients/base.ts:55</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-inherited"><a id="_stop" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>_stop</span><a href="#_stop" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-inherited">
+<li class="tsd-signature tsd-anchor-link" id="_stop._stop-1"><span class="tsd-kind-call-signature">_stop</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#_stop._stop-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<p>Inherited from BaseClient._stop</p>
+<ul>
+<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/ap/src/clients/base.ts#L60">packages/ap/src/clients/base.ts:60</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="clientReady" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>client<wbr/>Ready</span><a href="#clientReady" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="clientReady.clientReady-1"><span class="tsd-kind-call-signature">client<wbr/>Ready</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#clientReady.clientReady-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
+<p>Implementation of BaseClientInterface.clientReady</p>
+<ul>
+<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/ap/src/clients/djs_client.ts#L25">packages/ap/src/clients/djs_client.ts:25</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getMaxListeners" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Max<wbr/>Listeners</span><a href="#getMaxListeners" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="getMaxListeners.getMaxListeners-1"><span class="tsd-kind-call-signature">get<wbr/>Max<wbr/>Listeners</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getMaxListeners.getMaxListeners-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Returns the current max listener value for the <code>EventEmitter</code> which is either
-set by <code>emitter.setMaxListeners(n)</code> or defaults to <a href="emitter_src.EventEmitter.html#defaultMaxListeners" class="tsd-kind-property">defaultMaxListeners</a>.</p>
+set by <code>emitter.setMaxListeners(n)</code> or defaults to <a href="ap_src.DJSAutoPoster.html#defaultMaxListeners" class="tsd-kind-property">defaultMaxListeners</a>.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v1.0.0</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.getMaxListeners</p>
+<p>Inherited from BaseClient.getMaxListeners</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:631</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="getStats" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>get<wbr/>Stats</span><a href="#getStats" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="getStats.getStats-1"><span class="tsd-kind-call-signature">get<wbr/>Stats</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">&gt;</span><a href="#getStats.getStats-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">BotStats</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<p>Implementation of BaseClientInterface.getStats</p>
+<ul>
+<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/ap/src/clients/djs_client.ts#L35">packages/ap/src/clients/djs_client.ts:35</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="listenerCount" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>listener<wbr/>Count</span><a href="#listenerCount" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -509,13 +588,13 @@ in the list of the listeners of the event.</p>
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v3.2.0</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.listenerCount</p>
+<p>Inherited from BaseClient.listenerCount</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:725</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="setMaxListeners" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Max<wbr/>Listeners</span><a href="#setMaxListeners" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
-<li class="tsd-signature tsd-anchor-link" id="setMaxListeners.setMaxListeners-1"><span class="tsd-kind-call-signature">set<wbr/>Max<wbr/>Listeners</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">n</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span><a href="#setMaxListeners.setMaxListeners-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="setMaxListeners.setMaxListeners-1"><span class="tsd-kind-call-signature">set<wbr/>Max<wbr/>Listeners</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">n</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a><a href="#setMaxListeners.setMaxListeners-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>By default <code>EventEmitter</code>s will print a warning if more than <code>10</code> listeners are
 added for a particular event. This is a useful default that helps finding
@@ -528,13 +607,33 @@ modified for this specific <code>EventEmitter</code> instance. The value can be 
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">n</span>: <span class="tsd-signature-type">number</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="emitter_src.EventEmitter.html" class="tsd-signature-type tsd-kind-class">EventEmitter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">Map</span><span class="tsd-signature-symbol">&gt;</span></h4>
+<h4 class="tsd-returns-title">Returns <a href="ap_src.DJSAutoPoster.html" class="tsd-signature-type tsd-kind-class">DJSAutoPoster</a></h4>
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v0.3.5</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.setMaxListeners</p>
+<p>Inherited from BaseClient.setMaxListeners</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:625</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="waitForReady" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>wait<wbr/>For<wbr/>Ready</span><a href="#waitForReady" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="waitForReady.waitForReady-1"><span class="tsd-kind-call-signature">wait<wbr/>For<wbr/>Ready</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">fn</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#waitForReady.waitForReady-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">fn</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
+<ul class="tsd-parameters">
+<li class="tsd-parameter-signature">
+<ul class="tsd-signatures">
+<li class="tsd-signature"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+<li class="tsd-description">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<p>Implementation of BaseClientInterface.waitForReady</p>
+<ul>
+<li>Defined in <a href="https://github.com/InfinityBotList/node-sdk/blob/109baba/packages/ap/src/clients/djs_client.ts#L29">packages/ap/src/clients/djs_client.ts:29</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="addAbortListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>add<wbr/>Abort<wbr/>Listener</span><a href="#addAbortListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -576,7 +675,7 @@ not prevent the listener from running.</p>
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v20.5.0</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.addAbortListener</p>
+<p>Inherited from BaseClient.addAbortListener</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:375</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getEventListeners" class="tsd-anchor"></a>
@@ -603,7 +702,7 @@ event target. This is useful for debugging and diagnostic purposes.</p>
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v15.2.0, v14.17.0</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.getEventListeners</p>
+<p>Inherited from BaseClient.getEventListeners</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:296</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getMaxListeners-2" class="tsd-anchor"></a>
@@ -629,7 +728,7 @@ the max set, the EventTarget will print a warning.</p>
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v19.9.0</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.getMaxListeners</p>
+<p>Inherited from BaseClient.getMaxListeners</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:325</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="listenerCount-2" class="tsd-anchor"></a>
@@ -660,7 +759,7 @@ the max set, the EventTarget will print a warning.</p>
 
 <h4>Deprecated</h4><p>Since v3.2.0 - Use <code>listenerCount</code> instead.</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.listenerCount</p>
+<p>Inherited from BaseClient.listenerCount</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:268</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="on-1" class="tsd-anchor"></a>
@@ -695,7 +794,7 @@ composed of the emitted event arguments.</p>
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v13.6.0, v12.16.0</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.on</p>
+<p>Inherited from BaseClient.on</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:250</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="once-1" class="tsd-anchor"></a>
@@ -733,7 +832,7 @@ special handling:</p>
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v11.13.0, v10.16.0</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.once</p>
+<p>Inherited from BaseClient.once</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:189</li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="once-1.once-3"><span class="tsd-kind-call-signature">once</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">emitter</span>, <span class="tsd-kind-parameter">eventName</span>, <span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><a href="#once-1.once-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
@@ -748,7 +847,7 @@ special handling:</p>
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-type ">StaticEventEmitterOptions</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
-<p>Inherited from EM.once</p>
+<p>Inherited from BaseClient.once</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:190</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="setMaxListeners-2" class="tsd-anchor"></a>
@@ -773,7 +872,7 @@ special handling:</p>
 <div class="tsd-comment tsd-typography">
 <h4>Since</h4><p>v15.4.0</p>
 </div><aside class="tsd-sources">
-<p>Inherited from EM.setMaxListeners</p>
+<p>Inherited from BaseClient.setMaxListeners</p>
 <ul>
 <li>Defined in node_modules/@types/node/events.d.ts:340</li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
@@ -795,26 +894,35 @@ special handling:</p>
 <div class="tsd-accordion-details">
 <ul>
 <li><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-512"></use></svg><span>constructor</span></a></li>
-<li><a href="#_eventMapper_" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>[event<wbr/>Mapper]</span></a></li>
-<li><a href="#addListener" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>add<wbr/>Listener</span></a></li>
-<li><a href="#emit" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>emit</span></a></li>
-<li><a href="#eventNames" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>event<wbr/>Names</span></a></li>
-<li><a href="#listeners" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>listeners</span></a></li>
-<li><a href="#off" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>off</span></a></li>
-<li><a href="#on" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>on</span></a></li>
-<li><a href="#once" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>once</span></a></li>
-<li><a href="#prependListener" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>prepend<wbr/>Listener</span></a></li>
-<li><a href="#prependOnceListener" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>prepend<wbr/>Once<wbr/>Listener</span></a></li>
-<li><a href="#rawListeners" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>raw<wbr/>Listeners</span></a></li>
-<li><a href="#removeAllListeners" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>All<wbr/>Listeners</span></a></li>
-<li><a href="#removeListener" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>Listener</span></a></li>
+<li><a href="#_eventMapper_" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>[event<wbr/>Mapper]</span></a></li>
+<li><a href="#_interval" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_interval</span></a></li>
+<li><a href="#_started" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_started</span></a></li>
+<li><a href="#addListener" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>add<wbr/>Listener</span></a></li>
+<li><a href="#emit" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>emit</span></a></li>
+<li><a href="#eventNames" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>event<wbr/>Names</span></a></li>
+<li><a href="#listeners" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>listeners</span></a></li>
+<li><a href="#off" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>off</span></a></li>
+<li><a href="#on" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>on</span></a></li>
+<li><a href="#once" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>once</span></a></li>
+<li><a href="#prependListener" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>prepend<wbr/>Listener</span></a></li>
+<li><a href="#prependOnceListener" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>prepend<wbr/>Once<wbr/>Listener</span></a></li>
+<li><a href="#rawListeners" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>raw<wbr/>Listeners</span></a></li>
+<li><a href="#removeAllListeners" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>All<wbr/>Listeners</span></a></li>
+<li><a href="#removeListener" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>remove<wbr/>Listener</span></a></li>
 <li><a href="#captureRejectionSymbol" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>capture<wbr/>Rejection<wbr/>Symbol</span></a></li>
 <li><a href="#captureRejections" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>capture<wbr/>Rejections</span></a></li>
 <li><a href="#defaultMaxListeners" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>default<wbr/>Max<wbr/>Listeners</span></a></li>
 <li><a href="#errorMonitor" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>error<wbr/>Monitor</span></a></li>
+<li><a href="#_binder" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_binder</span></a></li>
+<li><a href="#_post" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_post</span></a></li>
+<li><a href="#_start" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_start</span></a></li>
+<li><a href="#_stop" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>_stop</span></a></li>
+<li><a href="#clientReady" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>client<wbr/>Ready</span></a></li>
 <li><a href="#getMaxListeners" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Max<wbr/>Listeners</span></a></li>
+<li><a href="#getStats" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Stats</span></a></li>
 <li><a href="#listenerCount" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>listener<wbr/>Count</span></a></li>
 <li><a href="#setMaxListeners" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>set<wbr/>Max<wbr/>Listeners</span></a></li>
+<li><a href="#waitForReady" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>wait<wbr/>For<wbr/>Ready</span></a></li>
 <li><a href="#addAbortListener" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>add<wbr/>Abort<wbr/>Listener</span></a></li>
 <li><a href="#getEventListeners" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Event<wbr/>Listeners</span></a></li>
 <li><a href="#getMaxListeners-2" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Max<wbr/>Listeners</span></a></li>
@@ -825,17 +933,15 @@ special handling:</p>
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-4"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M9.33 16V7.24H10.77L13.446 14.74C13.43 14.54 13.41 14.296 13.386 14.008C13.37 13.712 13.354 13.404 13.338 13.084C13.33 12.756 13.326 12.448 13.326 12.16V7.24H14.37V16H12.93L10.266 8.5C10.282 8.692 10.298 8.936 10.314 9.232C10.33 9.52 10.342 9.828 10.35 10.156C10.366 10.476 10.374 10.784 10.374 11.08V16H9.33Z" fill="var(--color-text)"></path></g></svg><span>@infinitylist</span></a>
 <ul class="tsd-small-nested-navigation">
-<li><a href="../modules/ap_src.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>ap/src</span></a></li>
-<li><a href="../modules/client_src.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>client/src</span></a></li>
 <li>
-<details class="tsd-index-accordion" open data-key="emitter/src"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="../modules/emitter_src.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>emitter/src</span></a></summary>
+<details class="tsd-index-accordion" open data-key="ap/src"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="#icon-chevronDown"></use></svg><a href="../modules/ap_src.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>ap/src</span></a></summary>
 <div class="tsd-accordion-details">
 <ul class="tsd-nested-navigation">
-<li><a href="emitter_src.EventEmitter.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-128"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-class)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)"></path></g></svg><span>Event<wbr/>Emitter</span></a></li>
-<li><a href="emitter_src.ExtendedEmitter.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-128"></use></svg><span>Extended<wbr/>Emitter</span></a></li>
-<li><a href="../functions/emitter_src.Event.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-64"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)"></path></g></svg><span>Event</span></a></li>
-<li><a href="../functions/emitter_src.Once.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>Once</span></a></li>
-<li><a href="../functions/emitter_src.applyToEmitter.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>apply<wbr/>To<wbr/>Emitter</span></a></li></ul></div></details></li>
+<li><a href="ap_src.DJSAutoPoster.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-128"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-class)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)"></path></g></svg><span>DJSAuto<wbr/>Poster</span></a></li>
+<li><a href="../variables/ap_src.default.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-32"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-variable)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M11.106 16L8.85 7.24H9.966L11.454 13.192C11.558 13.608 11.646 13.996 11.718 14.356C11.79 14.708 11.842 14.976 11.874 15.16C11.906 14.976 11.954 14.708 12.018 14.356C12.09 13.996 12.178 13.608 12.282 13.192L13.758 7.24H14.85L12.582 16H11.106Z" fill="var(--color-text)"></path></g></svg><span>default</span></a></li>
+<li><a href="../functions/ap_src.InfinityAutoPoster.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-64"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)"></path></g></svg><span>Infinity<wbr/>Auto<wbr/>Poster</span></a></li></ul></div></details></li>
+<li><a href="../modules/client_src.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>client/src</span></a></li>
+<li><a href="../modules/emitter_src.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>emitter/src</span></a></li>
 <li><a href="../modules/ipm_src.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>ipm/src</span></a></li>
 <li><a href="../modules/logger_src_logger.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>logger/src/logger</span></a></li>
 <li><a href="../modules/sdk_src.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-4"></use></svg><span>sdk/src</span></a></li></ul></nav></div></div></div>
