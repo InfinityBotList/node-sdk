@@ -3,12 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.1.3](https://github.com/InfinityBotList/node-sdk/compare/v0.1.2...v0.1.3) (2023-08-22)
-
-### Bug Fixes
-
--   **update:** spider types and main path ([1559ac6](https://github.com/InfinityBotList/node-sdk/commit/1559ac635203871247c48719dff394d8afe3ba69))
-
 ## [0.1.2](https://github.com/InfinityBotList/node-sdk/compare/v0.1.1...v0.1.2) (2023-08-22)
 
 ### Bug Fixes

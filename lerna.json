@@ -4,8 +4,7 @@
         "publish": {
             "registry": "https://registry.npmjs.org/",
             "conventionalCommits": true,
-            "npmClient": "npm",
-            "verifyAccess": true
+            "npmClient": "npm"
         },
         "version": {
             "allowBranch": "master",
@@ -17,5 +16,5 @@
         }
     },
     "packages": ["packages/*"],
-    "version": "0.1.3"
+    "version": "0.1.2"
 }
