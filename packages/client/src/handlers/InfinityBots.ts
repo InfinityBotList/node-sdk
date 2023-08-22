@@ -3,7 +3,7 @@ import InfinityError from '../errors/error'
 import InfinityRatelimit from '../errors/ratelimit'
 import { EventEmitter } from 'events'
 
-import { BotStatistics } from '../typings'
+import { BotStats } from '../typings'
 
 interface InfinityOptions {
     auth?: string
@@ -100,7 +100,7 @@ export class InfinityBots extends EventEmitter {
         }
     }
 
-    public async postBotStats(stats: BotStatistics): Promise<BotStatistics> {
+    public async postBotStats(stats: BotStats): Promise<BotStats> {
         if (!stats) {
             throw new Error('[Infinity API] No Stats provided, Please provide a valid Client Server and Shard Count')
         }
@@ -109,7 +109,7 @@ export class InfinityBots extends EventEmitter {
         await this._request('POST', 'bots/stats', {
             servers: stats.servers || 0,
             shards: stats.shards || 0,
-            user_count: stats.users || 0
+            users: stats.users || 0
         })
 
         /* eslint-enable camelcase */

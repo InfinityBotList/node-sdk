@@ -18,7 +18,7 @@ during the next [left-pad incident](https://blog.npmjs.org/post/141577284765/kik
    [registry.npmjs.org](https://registry.npmjs.org).
 1. Decompress the .tgz files into .tar files. This avoids storing binary files
    in Git and removes the cost of decompression during `npm install`.
-1. Store the .tar files in your project at `node_infinity/*.tar`.
+1. Store the .tar files in your project at `node_modules/*.tar`.
 1. Rewrite `package-lock.json` to point at those instead of the registry.
 
 Now your project can be installed while completely offline:
@@ -30,7 +30,7 @@ Now your project can be installed while completely offline:
 
 The rest of the npm installation process is exactly the same. The only
 difference is that no network activity is necessary when installing and building
-your project. The `node_infinity` directory can be ignored in your editor
+your project. The `node_modules` directory can be ignored in your editor
 (much like is done with the `node_modules` directory), but is instead checked
 into source control.
 
@@ -52,11 +52,11 @@ npm shrinkwrap
 
 ## Usage
 
-Run `infinity` every time you have modified and installed your dependencies to
+Run `ipm` every time you have modified and installed your dependencies to
 produce a new `package-lock.json`.
 
 ```
-Usage: infinity [options] [directory]
+Usage: ipm [options] [directory]
 
 Options:
   -V, --version  output the version number

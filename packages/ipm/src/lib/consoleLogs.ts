@@ -1,6 +1,10 @@
 import color from 'picocolors'
 
 export const log = {
+    success(msg: string): void {
+        console.log(color.green('+'), msg)
+    },
+
     deletion(msg: string): void {
         console.log(color.red('-'), msg)
     },
