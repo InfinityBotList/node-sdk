@@ -1,21 +1,17 @@
 import fetch from 'node-fetch'
-const { prettyLogs } = require('@infinitylist/logger')
 
 export default class InfinityFetcher {
     private apiKey: string
     public botID: string
-    public url: string
 
     constructor(
         options = {
             auth: '',
-            botID: '',
-            url: 'https://spider.infinitybots.gg'
+            botID: ''
         }
     ) {
         this.apiKey = options.auth
         this.botID = options.botID
-        this.url = options.url
     }
 
     /**
@@ -25,11 +21,10 @@ export default class InfinityFetcher {
      * =================================================
      */
     public async getUserVotes(userID?: string) {
-        if (!userID || typeof userID !== 'string') {
-            return prettyLogs('Please provide a valid discord user id!', 'error')
-        } else if (!this.botID) {
-            return prettyLogs('Please provide a valid discord bot id', 'error')
-        }
+        if (!userID || typeof userID !== 'string')
+            throw new ReferenceError('[@infinitylist/sdk]: please provide a valid user id')
+        else if (!this.botID || typeof this.botID !== 'string')
+            throw new ReferenceError('[@infinitylist/sdk]: Please provide a valid discord bot id')
 
         const res = await fetch(`https://spider.infinitybots.gg/users/${userID}/bots/${this.botID}/votes`, {
             method: 'GET',
@@ -39,14 +34,15 @@ export default class InfinityFetcher {
         })
 
         if (!res.ok) {
-            return prettyLogs(
-                'Whoops we seem to be having some issues contacting our api. Please try again later!',
-                'error'
+            throw new Error(
+                '[@infinitylist/sdk]: Whoops we seem to be having some issues contacting our api. Please try again later!'
             )
         }
 
         if (res.status !== 204 && res.status !== 200) {
-            return prettyLogs(`Hold up, it looks like our api responded with a status code of ${res.status}`)
+            throw new Error(
+                `[@infinitylist/sdk]: Hold up, it looks like our api responded with a status code of ${res.status}`
+            )
         }
 
         const voteData = await res.json()
@@ -65,7 +61,8 @@ export default class InfinityFetcher {
      * =================================================
      */
     public async getBotInfo() {
-        if (!this.botID) throw new ReferenceError('[@infinitybots/node-sdk]: Please provide a valid Bot ID')
+        if (!this.botID)
+            throw new ReferenceError('[@infinitylist/sdk]: no client id provided, please provide a bot id!')
 
         const res = await fetch(`https://spider.infinitybots.gg/bots/${this.botID}`, {
             method: 'GET',
@@ -75,14 +72,15 @@ export default class InfinityFetcher {
         })
 
         if (!res.ok) {
-            return prettyLogs(
-                'Whoops we seem to be having some issues contacting our api. Please try again later!',
-                'error'
+            throw new Error(
+                '[@infinitylist/sdk]: Whoops we seem to be having some issues contacting our api. Please try again later!'
             )
         }
 
         if (res.status !== 204 && res.status !== 200) {
-            return prettyLogs(`Hold up, it looks like our api responded with a status code of ${res.status}`)
+            throw new Error(
+                `[@infinitylist/sdk]: Hold up, it looks like our api responded with a status code of ${res.status}`
+            )
         }
 
         const botData = await res.json()

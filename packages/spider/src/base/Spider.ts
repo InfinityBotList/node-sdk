@@ -1,10 +1,11 @@
 import fetch, { Headers } from 'node-fetch'
 import ilError from '../errors/error'
 import ilRatelimit from '../errors/ratelimit'
-import { Snowflake } from '@infinitylist/client/dist/typings'
+import { Snowflake, Blog, BlogPost } from '@infinitylist/client/dist/typings'
 import { EventEmitter } from 'events'
 import { PageQuery } from '../@interfaces/queries/PageQuery'
 import { UserAlerts } from '../@interfaces/responses/UserAlerts'
+import { BlogSeo } from '../@interfaces/responses/BlogSeo'
 
 interface Options {
     auth?: string
@@ -97,15 +98,38 @@ export class SpiderClient extends EventEmitter {
     /**
      * ALERT BASED EVENTS
      */
-    public async getUserAlerts(id: Snowflake, page?: PageQuery): Promise<UserAlerts> {
+    public async _getUserAlerts(id: Snowflake, page?: PageQuery): Promise<UserAlerts> {
         if (!id) throw new Error('please provide a valid user id!')
         if (page && typeof page !== 'number') throw new Error('page should be a valid number')
 
-        return this._request('GET', `/users/${id}/alerts`, page).then((x: UserAlerts) => {
+        return this._request('GET', `users/${id}/alerts?=${page}`).then((x: UserAlerts) => {
             return {
                 count: x.count,
                 per_page: x.per_page,
                 results: x.results
+            }
+        })
+    }
+
+    /**
+     * BLOG BASED EVENTS
+     */
+    public async _getBlogList(): Promise<Blog> {
+        return this._request('GET', 'blogs/@all')
+    }
+
+    public async _getBlogPost({ slug }: BlogPost): Promise<BlogPost> {
+        return this._request('GET', `blogs/${slug}`)
+    }
+
+    public async _getBlogSeo({ slug }: BlogPost): Promise<BlogSeo> {
+        return this._request('GET', `blogs/${slug}/seo`).then(seo => {
+            return {
+                id: seo.id ?? null,
+                avatar: seo.avatar ?? null,
+                name: seo.name ?? null,
+                username: seo.username ?? null,
+                short: seo.short ?? null
             }
         })
     }
