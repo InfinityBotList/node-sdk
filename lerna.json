@@ -7,7 +7,7 @@
             "npmClient": "npm"
         },
         "version": {
-            "ignoreChanges": ["**"],
+            "conventionalCommits": true,
             "conventionalGraduate": true,
             "allowBranch": "master",
             "message": "publish new version",
@@ -18,5 +18,5 @@
         }
     },
     "packages": ["packages/*"],
-    "version": "0.1.7-alpha.1"
+    "version": "0.1.7-alpha.2"
 }
