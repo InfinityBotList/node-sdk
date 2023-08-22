@@ -8,6 +8,7 @@ The official node sdk for interacting with all of our services and modules.
 - [infinitylist/client](./packages/client/README.md)
 - [infinitylist/emitter](./packages/emitter/README.md)
 - [infinitylist/logger](./packages/logger/README.md)
+- [infinitylist/ipm](./packages/ipm/README.md)
 
 ---
 
