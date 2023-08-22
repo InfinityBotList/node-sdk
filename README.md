@@ -1,6 +1,8 @@
 # @infinitybots
 The official node sdk for interacting with all of our services and modules.
 
+[![CodeQL](https://github.com/InfinityBotList/node-sdk/actions/workflows/codeql.yml/badge.svg)](https://github.com/InfinityBotList/node-sdk/actions/workflows/codeql.yml)
+
 ---
 
 ## Packages
