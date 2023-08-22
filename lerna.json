@@ -2,7 +2,19 @@
     "$schema": "node_modules/lerna/schemas/lerna-schema.json",
     "command": {
         "publish": {
-            "conventionalCommits": true
+            "registry": "https://registry.npmjs.org/",
+            "conventionalCommits": true,
+            "npmClient": "npm",
+            "verifyAccess": true
+        },
+        "version": {
+            "createRelease": "github",
+            "allowBranch": "master",
+            "message": "publish new version",
+            "npmClient": "npm"
+        },
+        "bootstrap": {
+            "loglevel": "info"
         }
     },
     "packages": ["packages/*"],

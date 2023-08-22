@@ -4,6 +4,7 @@
         "packages/sdk/src/index.ts",
         "packages/client/src/index.ts",
         "packages/emitter/src/index.ts",
+        "packages/infinitylist/src/index.ts",
         "packages/logger/src/logger.ts",
         "packages/ipm/src/index.ts",
         "packages/ap/src/index.ts"

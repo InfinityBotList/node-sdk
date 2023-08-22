@@ -1,0 +1,52 @@
+{
+    "name": "infinitylist",
+    "description": "The easy way to interact with the infinity api",
+    "license": "MIT",
+    "main": "./dist/logger.js",
+    "types": "./dist/logger.d.ts",
+    "version": "0.0.0",
+    "directories": {
+        "src": "src",
+        "test": "__tests__"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsc",
+        "tester": "jest --verbose",
+        "test:coverage": "jest --coverage"
+    },
+    "author": {
+        "name": "Toxic Dev",
+        "url": "https://github.com/TheRealToxicDev"
+    },
+    "homepage": "https://infinitybotlist.github.io/node-sdk/index.html",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/InfinityBotList/node-sdk.git"
+    },
+    "bugs": {
+        "url": "https://github.com/InfinityBotList/node-sdk/issues"
+    },
+    "dependencies": {
+        "@infinitylist/ap": "latest",
+        "@infinitylist/client": "latest",
+        "@infinitylist/emitter": "latest",
+        "@infinitylist/ipm": "latest",
+        "@infinitylist/logger": "latest",
+        "@infinitylist/sdk": "latest",
+        "@types/node": "^20.5.1",
+        "@types/node-fetch": "^2.6.4",
+        "chalk": "^4.1.2",
+        "moment": "^2.29.1",
+        "node-fetch": "^2.6.1",
+        "raw-body": "^2.4.1"
+    },
+    "devDependencies": {
+        "typescript": "^5.1.6"
+    }
+}
