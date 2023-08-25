@@ -36,8 +36,7 @@ export class DJSAutoPoster extends BaseClient implements BaseClientInterface {
         return {
             users: this._client.users.cache.size,
             servers: this._client.guilds.cache.size,
-            shards: this._client.options.shardCount ? this._client.options.shardCount : 0,
-            shard_list: this._client.shard.ids ? this._client.shard.ids : []
+            shards: this._client.options.shardCount ? this._client.options.shardCount : 0
         }
     }
 }

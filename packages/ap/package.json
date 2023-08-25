@@ -40,5 +40,6 @@
     },
     "devDependencies": {
         "discord.js": "^12.5.3"
-    }
+    },
+    "gitHead": "72cb361da6803e1f3ab28fca4128a96ef80ee673"
 }
