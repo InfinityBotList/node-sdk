@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7-alpha.3](https://github.com/InfinityBotList/node-sdk/compare/v0.1.7-alpha.2...v0.1.7-alpha.3) (2023-08-25)
+
+### Bug Fixes
+
+-   **update:** autoposter shard list requirements ([c1159d3](https://github.com/InfinityBotList/node-sdk/commit/c1159d39cf6ecff7efe0a830f6ba49c58ba2be0f))
+
 ## [0.1.7-alpha.2](https://github.com/InfinityBotList/node-sdk/compare/v0.1.7-alpha.1...v0.1.7-alpha.2) (2023-08-22)
 
 ### Bug Fixes
