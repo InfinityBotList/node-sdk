@@ -41,5 +41,6 @@
         "@types/node-fetch": "^2.6.4",
         "ts-node": "^10.9.1",
         "typescript": "^5.1.6"
-    }
+    },
+    "gitHead": "6cf36d4d527cd4795595056f00c367337143e3c5"
 }
