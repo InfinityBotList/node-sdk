@@ -23,7 +23,7 @@
         "name": "Toxic Dev",
         "url": "https://github.com/TheRealToxicDev"
     },
-    "homepage": "https://infinitybotlist.github.io/node-sdk/index.html",
+    "homepage": "https://infinitybotlist.github.io/node-sdk/modules/ap_src.html",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/InfinityBotList/node-sdk.git"
@@ -41,5 +41,5 @@
     "devDependencies": {
         "discord.js": "^12.5.3"
     },
-    "gitHead": "e24fc805f9850a105477f865c3dad7cd0026f4a0"
+    "gitHead": "391babee4301ccf4ef52985c5c649e348df14ee4"
 }

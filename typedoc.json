@@ -6,6 +6,7 @@
         "packages/client/src/index.ts",
         "packages/emitter/src/index.ts",
         "packages/logger/src/logger.ts",
+        "packages/uptime/src/index.ts",
         "packages/ipm/src/index.ts",
         "packages/ap/src/index.ts"
     ],

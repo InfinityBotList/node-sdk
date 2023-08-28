@@ -1,0 +1,49 @@
+{
+    "name": "@infinitylist/uptime",
+    "description": "Simple method for monitoring your website status",
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "version": "0.0.0",
+    "directories": {
+        "src": "src",
+        "test": "__tests__"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "node ./__tests__/uptime.test.js"
+    },
+    "author": {
+        "name": "Toxic Dev",
+        "url": "https://github.com/TheRealToxicDev"
+    },
+    "homepage": "https://infinitybotlist.github.io/node-sdk/modules/uptime_src.html",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/InfinityBotList/node-sdk.git"
+    },
+    "bugs": {
+        "url": "https://github.com/InfinityBotList/node-sdk/issues"
+    },
+    "dependencies": {
+        "@infinitylist/ap": "latest",
+        "@infinitylist/client": "latest",
+        "@infinitylist/emitter": "latest",
+        "@infinitylist/ipm": "latest",
+        "@infinitylist/logger": "latest",
+        "@infinitylist/sdk": "latest",
+        "@types/node": "^20.5.1",
+        "@types/node-fetch": "^2.6.4",
+        "node-fetch": "^2.6.1",
+        "ora": "5.0.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.1.6"
+    }
+}

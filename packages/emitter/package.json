@@ -22,7 +22,7 @@
         "name": "Toxic Dev",
         "url": "https://github.com/TheRealToxicDev"
     },
-    "homepage": "https://infinitybotlist.github.io/node-sdk/index.html",
+    "homepage": "https://infinitybotlist.github.io/node-sdk/modules/emitter_src.html",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/InfinityBotList/node-sdk.git"
