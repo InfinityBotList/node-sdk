@@ -11,6 +11,7 @@
             "conventionalGraduate": true,
             "allowBranch": "master",
             "message": "publish new version",
+            "exact": true,
             "npmClient": "npm"
         },
         "bootstrap": {
