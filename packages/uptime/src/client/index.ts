@@ -22,45 +22,53 @@ export class UptimeClient extends EventEmitter {
     constructor(url: string, options?: IOptions) {
         super()
 
-        if (!url)
+        if (!url) {
             throw new Error('[@infinitylist/uptime]: invalid url provided, please check the provided url and try again')
+        }
 
         this.url = url
 
         if (options) {
             if (options.interval) {
-                if (typeof options.interval !== 'number')
+                if (typeof options.interval !== 'number') {
                     throw new TypeError('[@infinitylist/uptime]: interval should be a valid integer')
-                if (options.interval < config.minInterval)
+                }
+                if (options.interval < config.minInterval) {
                     throw new RangeError(
                         `[@infinitylist/uptime]: interval should be greater then ${config.minInterval}ms`
                     )
+                }
                 this.interval = options.interval
             }
 
             if (options.retries) {
-                if (typeof options.retries !== 'number')
+                if (typeof options.retries !== 'number') {
                     throw new TypeError('[@infinitylist/uptime]: retries should be a valid integer')
-                if (options.retries < config.default.retries)
+                }
+                if (options.retries < config.default.retries) {
                     throw new RangeError(
                         `[@infinitylist/uptime]: retries should be greater then ${config.default.retries}`
                     )
+                }
                 this.retries = options.retries
             }
 
             if (options.timeout) {
-                if (typeof options.timeout !== 'number')
+                if (typeof options.timeout !== 'number') {
                     throw new TypeError('[@infinitylist/uptime]: timeout should be a valid integer')
-                if (options.timeout < config.default.timeout)
+                }
+                if (options.timeout < config.default.timeout) {
                     throw new RangeError(
                         `[@infinitylist/uptime]: timeout should be greater then ${config.default.timeout}ms`
                     )
+                }
                 this.timeout = options.timeout
             }
 
             if (options.headers) {
-                if (typeof options.headers !== 'object')
+                if (typeof options.headers !== 'object') {
                     throw new TypeError('[@infinitylist/uptime]: headers should be a valid object')
+                }
                 this.headers = options.headers
             }
         }
@@ -115,13 +123,15 @@ export class UptimeClient extends EventEmitter {
                         this._emitOutage(undefined, 'timeout')
                     }
                 } else {
-                    if (e.message.match('Only absolute URLs are supported'))
+                    if (e.message.match('Only absolute URLs are supported')) {
                         return this.emit('error', TypeError('[@infinitylist/uptime]: only absolute urls are supported'))
-                    if (e.message.match('ECONNREFUSED'))
+                    }
+                    if (e.message.match('ECONNREFUSED')) {
                         return this.emit(
                             'error',
                             TypeError(`[@infinitylist/client]: unknown host: ${this.url} connection refused`)
                         )
+                    }
 
                     this.emit('error', e)
                 }
@@ -161,12 +171,14 @@ export class UptimeClient extends EventEmitter {
     }
 
     _setInterval(newInterval: number): boolean {
-        if (!newInterval)
+        if (!newInterval) {
             throw new Error(
                 `[@infinitylist/uptime]: please provide a valid interval, should be a integer greater then ${config.minInterval}`
             )
-        if (newInterval < config.minInterval)
+        }
+        if (newInterval < config.minInterval) {
             throw new RangeError(`[@infinitylist/uptime]: interval should be greater then ${config.minInterval}`)
+        }
         this.interval = newInterval
         return true
     }

@@ -41,5 +41,6 @@
         "node-fetch": "^2.6.1",
         "raw-body": "^2.4.1",
         "typescript": "^5.1.6"
-    }
+    },
+    "gitHead": "08ea28fc885b220980ee9f6cefb0c4cfa225bde9"
 }

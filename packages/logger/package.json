@@ -39,5 +39,6 @@
         "@types/node": "^20.5.1",
         "@types/node-fetch": "^2.6.4",
         "typescript": "^5.1.6"
-    }
+    },
+    "gitHead": "08ea28fc885b220980ee9f6cefb0c4cfa225bde9"
 }

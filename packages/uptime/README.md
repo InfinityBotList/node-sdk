@@ -139,7 +139,7 @@ Return :
 Boolean
 
 ```js
-Monitor.start();
+Monitor._start();
 ```
 
 ## restart()
@@ -151,7 +151,7 @@ Return :
 Boolean
 
 ```js
-Monitor.restart();
+Monitor._restart();
 ```
 
 ## stop()
@@ -163,7 +163,7 @@ Return :
 Boolean
 
 ```js
-Monitor.stop();
+Monitor._stop();
 ```
 
 ## setInterval(newInterval)
@@ -179,7 +179,7 @@ Return :
 Boolean
 
 ```js
-Monitor.setInterval(200);
+Monitor._setInterval(200);
 ```
 
 ## setURL(newURL)
@@ -195,32 +195,37 @@ Return :
 Boolean
 
 ```js
-Monitor.setURL("https://www.exempla-website.com");
+Monitor._setURL("https://www.exempla-website.com");
 ```
 
-## Example
+## Example Monitor Function
 
 ```js
-const { DownDetector } = require("downtime-detector");
+const { UptimeClient } = require("@infinitylist/uptime");
 
-const Monitor = new DownDetector("https://website-example.com", {
-  interval: 3000,
-  timeout: 5000,
-});
+module.exports.startMonitor = async ({ client }) => {
 
-Monitor.start();
-console.log(Monitor.infos);
+  const uptime = new UptimeClient("https://www.exempla-website.com", {
+    interval: 20000,
+    retries: 3,
+  });
 
-Monitor.on("outage", (outage) => {
-  console.log(outage);
-});
+  uptime._start();
 
-Monitor.on("up", (up) => {
-  console.log(up);
-});
-Monitor.on("error", (error) => {
-  console.log(error);
-});
+  uptime.on("up", async (up) => {
+    console.log(up);
+  });
+
+  uptime.on("outage", async (outage) => {
+    console.log(`${outage.statusCode} | ${outage.statusText}`)
+  });
+
+  uptime.on("error", async (error) => {
+    await console.error(error);
+    await uptime._setInterval(0);
+    return uptime._stop();
+  });
+};
 ```
 
 ---
